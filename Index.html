@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>All in One Foods | Restaurant</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SIGNUP SECTION -->
+    <section id="signup">
+        <h1>All in One Foods</h1>
+        <h2>Create Your Account</h2>
+
+        <form action="#" method="post">
+            <label for="signup-name">Full Name:</label>
+            <input type="text" id="signup-name"
+                   name="name" required>
+            <br><br>
+
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email"
+                   name="email" required>
+            <br><br>
+
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password"
+                   name="password" required>
+            <br><br>
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <p>Already have an account?
+            <a href="#login">Login Here</a>
+        </p>
+    </section>
+
+    <hr>
+
+    <!-- LOGIN SECTION -->
+    <section id="login">
+        <h2>Login to Your Account</h2>
+
+        <form action="#" method="post">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email"
+                   name="email" required>
+            <br><br>
+
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password"
+                   name="password" required>
+            <br><br>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account?
+            <a href="#signup">Create Account</a>
+        </p>
+    </section>
+
+    <hr>
+
+    <!-- HEADER / NAVBAR -->
+    <header>
+        <h1>All in One Foods</h1>
+
+        <nav>
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#menu">Menu</a> |
+            <a href="#gallery">Gallery</a> |
+            <a href="#contact">Contact</a> |
+            <a href="#reservation">Book a Table</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main id="restaurant-content">
+
+        <!-- HERO SECTION -->
+        <section id="home">
+            <h2>Welcome to All in One Foods</h2>
+
+            <p>
+                Delicious Desi, Chinese, Fast Food and BBQ.
+                Four kitchens, one amazing experience.
+            </p>
+
+            <a href="#menu">View Menu</a>
+            |
+            <a href="#reservation">Book a Table</a>
+
+            <br><br>
+
+            <img src="images/home.jpg" alt="Restaurant special food"
+                 width="500">
+        </section>
+
+        <hr>
+
+        <!-- ABOUT US -->
+        <section id="about">
+            <h2>About Our Restaurant</h2>
+
+            <p>
+                Welcome to All in One Foods, where delicious
+                flavours meet fresh ingredients. We serve
+                quality food for families and friends.
+            </p>
+
+            <img src="" alt="Restaurant interior"
+                 width="400">
+        </section>
+
+        <hr>
+
+        <!-- FOOD CATEGORIES -->
+        <section id="categories">
+            <h2>Explore Our Categories</h2>
+
+            <ul>
+                <li><a href="#starters">Starters</a></li>
+                <li><a href="#main-course">Main Course</a></li>
+                <li><a href="#desserts">Desserts</a></li>
+                <li><a href="#drinks">Drinks</a></li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- MENU: ALL SIX DISHES IN ONE PLACE -->
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <p>Discover our delicious dishes.</p>
+
+            <h3 id="starters">Starters</h3>
+
+            <article>
+                <img src="images/samosa.png" alt="Chicken samosa" width="200">
+                <h4>Chicken Samosa</h4>
+                <p>Crispy pastry filled with spicy chicken.</p>
+                <p>Price: Rs. 250</p>
+                <button type="button">Add to Cart</button>
+            </article>
+
+            <article>
+                <img src="images/wings.png" alt="Chicken wings" width="200">
+                <h4>Chicken Wings</h4>
+                <p>Juicy wings seasoned with special spices.</p>
+                <p>Price: Rs. 550</p>
+                <button type="button">Add to Cart</button>
+            </article>
+
+            <h3 id="main-course">Main Course</h3>
+
+            <article>
+                <img src="images/biryani.jpg" alt="Chicken biryani" width="200">
+                <h4>Chicken Biryani</h4>
+                <p>Traditional aromatic rice with chicken.</p>
+                <p>Price: Rs. 450</p>
+                <button type="button">Add to Cart</button>
+            </article>
+
+            <article>
+                <img src="images/karahi.jpg" alt="Chicken karahi" width="200">
+                <h4>Chicken Karahi</h4>
+                <p>Chicken cooked with tomatoes and spices.</p>
+                <p>Price: Rs. 1,400</p>
+                <button type="button">Add to Cart</button>
+            </article>
+
+            <h3 id="desserts">Desserts</h3>
+
+            <article>
+                <img src="images/cake.jpg" alt="Chocolate cake" width="200">
+                <h4>Chocolate Cake</h4>
+                <p>Rich chocolate cake for dessert lovers.</p>
+                <p>Price: Rs. 350</p>
+                <button type="button">Add to Cart</button>
+            </article>
+
+            <h3 id="drinks">Drinks</h3>
+
+            <article>
+                <img src="images/lemonade.jpg" alt="Fresh lemonade" width="200">
+                <h4>Fresh Lemonade</h4>
+                <p>Refreshing lemonade made with fresh lemons.</p>
+                <p>Price: Rs. 200</p>
+                <button type="button">Add to Cart</button>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- CHEF'S SPECIAL -->
+        <section id="chefs-special">
+            <h2>Chef's Special</h2>
+
+            <article>
+                <img src="images/bbq.jpg" alt="Special BBQ platter" width="300">
+                <h3>Special BBQ Platter</h3>
+                <p>A delicious selection of grilled favourites.</p>
+                <p>Price: Rs. 2,000</p>
+                <button type="button">Add to Cart</button>
+            </article>
+
+            <article>
+                <img src="images/pizza.jpg" alt="Special pizza" width="300">
+                <h3>All in One Special Pizza</h3>
+                <p>A flavourful pizza with a generous topping.</p>
+                <p>Price: Rs. 1,500</p>
+                <button type="button">Add to Cart</button>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- SPECIAL OFFERS -->
+        <section id="offers">
+            <h2>Special Offers</h2>
+
+            <article>
+                <img src="images/chicken.jpg" alt="Family meal offer" width="300">
+                <h3>Family Feast</h3>
+                <p>Enjoy 20% off on selected family meals.</p>
+            </article>
+
+            <article>
+                <img src="images/burgers.jpg" alt="Burger combo offer" width="300">
+                <h3>Burger Combo</h3>
+                <p>Enjoy a burger and drink combo deal.</p>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- GALLERY -->
+        <section id="gallery">
+            <h2>Our Gallery</h2>
+
+            <img src="images/food.jpg" alt="Delicious restaurant dish" width="250">
+            <img src="images/chef.jpg" alt="Freshly prepared food" width="250">
+            <img src="images/green.jpg" alt="Restaurant dining area" width="250">
+            <img src="images/cook.jpg" alt="Family dining space" width="250">
+        </section>
+
+        <hr>
+
+        <!-- CUSTOMER REVIEWS -->
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+
+            <article>
+                <h3>Ahmed</h3>
+                <p>★★★★★</p>
+                <p>Great food and friendly service!</p>
+            </article>
+
+            <article>
+                <h3>Ali</h3>
+                <p>★★★★☆</p>
+                <p>The food was delicious and fresh.</p>
+            </article>
+
+            <article>
+                <h3>Sara</h3>
+                <p>★★★★★</p>
+                <p>A lovely place for family dining.</p>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- RESERVATION -->
+        <section id="reservation">
+            <h2>Book Your Table</h2>
+
+            <form action="#" method="post">
+
+                <label for="customer-name">Full Name:</label>
+                <input type="text" id="customer-name"
+                       name="customer_name" required>
+                <br><br>
+
+                <label for="customer-email">Email:</label>
+                <input type="email" id="customer-email"
+                       name="customer_email" required>
+                <br><br>
+
+                <label for="booking-date">Date:</label>
+                <input type="date" id="booking-date"
+                       name="date" required>
+                <br><br>
+
+                <label for="booking-time">Time:</label>
+                <input type="time" id="booking-time"
+                       name="time" required>
+                <br><br>
+
+                <label for="guests">Number of Guests:</label>
+                <select id="guests" name="guests" required>
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5 Guests</option>
+                    <option value="6">6 Guests</option>
+                    <option value="7">7 Guests</option>
+                    <option value="8">8 Guests</option>
+                </select>
+                <br><br>
+
+                <label for="booking-message">
+                    Special Requests:
+                </label>
+                <br>
+
+                <textarea id="booking-message"
+                          name="message" rows="4" cols="30"></textarea>
+                <br><br>
+
+                <button type="submit">Book Table</button>
+
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+
+            <p>Address: Karachi, Pakistan</p>
+            <p>Phone: +92 300 1234567</p>
+            <p>Email: info@example.com</p>
+
+            <h3>Opening Hours</h3>
+            <p>Monday - Thursday: 12:30 PM - 12:00 AM</p>
+            <p>Friday - Sunday: 12:30 PM - 2:00 AM</p>
+
+            <h3>Find Us on the Map</h3>
+
+            <iframe
+                src="images/contact.jpg"
+                title="Restaurant location map"
+                width="400"
+                height="300">
+            </iframe>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>All in One Foods</h2>
+
+        <h3>Quick Links</h3>
+        <nav>
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#menu">Menu</a> |
+            <a href="#gallery">Gallery</a> |
+            <a href="#reservation">Reservation</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <h3>Follow Us</h3>
+        <p>
+            <a href="#">Instagram</a> |
+            <a href="#">Facebook</a> |
+            <a href="#">TikTok</a>
+        </p>
+
+        <p>Copyright 2026 All in One Foods.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+  </html>
