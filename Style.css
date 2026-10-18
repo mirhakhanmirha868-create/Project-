@@ -1,0 +1,1018 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+    --cream: #F7F0E8;
+    --cream-dark: #EADBCD;
+    --beige: #C89674;
+    --mocha: #91664A;
+    --espresso: #5C402F;
+    --wood: #332116;
+    --balsamico: #160C06;
+    --white: #FFFDF9;
+    --text: #332116;
+    --muted: #887466;
+    --border: rgba(92, 64, 47, 0.16);
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', Arial, sans-serif;
+    --shadow: 0 15px 45px rgba(51, 33, 22, 0.08);
+    --shadow-hover: 0 24px 55px rgba(51, 33, 22, 0.14);
+    --transition: 0.35s ease;
+}
+
+/* 01. GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    overflow-x: hidden;
+    background: var(--cream);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+::selection {
+    background: var(--mocha);
+    color: var(--white);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--mocha);
+    outline-offset: 4px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--serif);
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+p {
+    color: var(--muted);
+}
+
+hr {
+    display: none;
+}
+
+section {
+    position: relative;
+    scroll-margin-top: 95px;
+}
+
+/* 02. PAGE ORDER */
+
+#signup { order: 1; }
+#login { order: 2; }
+header { order: 3; }
+#restaurant-content { order: 4; }
+footer { order: 5; }
+
+/* 03. SIGNUP */
+
+#signup {
+    width: min(92%, 500px);
+    margin: 42px auto 30px;
+    padding: 40px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at top right,
+        rgba(200,150,116,.17), transparent 45%),
+        var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+}
+
+#signup::before,
+#login::before {
+    display: block;
+    margin-bottom: 17px;
+    color: var(--mocha);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+#signup::before {
+    content: 'BECOME PART OF OUR TABLE';
+}
+
+#signup::after {
+    content: '';
+    display: block;
+    height: 3px;
+    margin: 28px -40px -40px;
+    background: linear-gradient(
+        90deg, var(--wood), var(--mocha), var(--beige)
+    );
+}
+
+#signup > h1 {
+    margin-bottom: 10px;
+    color: var(--wood);
+    font-size: clamp(32px, 5vw, 44px);
+    font-weight: 600;
+    letter-spacing: -1.4px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+#signup > h2,
+#login > h2 {
+    margin-bottom: 27px;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+
+#signup > h2 {
+    color: var(--espresso);
+}
+
+#signup form br,
+#login form br,
+#reservation form br {
+    display: none;
+}
+
+#signup form label,
+#login form label {
+    display: block;
+    margin: 0 0 7px;
+    color: var(--espresso);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#signup form input,
+#login form input {
+    display: block;
+    width: 100%;
+    height: 49px;
+    margin: 0 0 17px;
+    padding: 12px 14px;
+    background: #FCF8F3;
+    border: 1px solid #E1D2C3;
+    border-radius: 3px;
+    outline: none;
+    transition: all var(--transition);
+}
+
+#signup form input:focus,
+#login form input:focus {
+    background: var(--white);
+    border-color: var(--mocha);
+    box-shadow: 0 0 0 3px rgba(145,102,74,.10);
+}
+
+#signup form button,
+#login form button {
+    width: 100%;
+    min-height: 51px;
+    margin-top: 8px;
+    color: var(--white);
+    background: var(--wood);
+    border: 1px solid var(--wood);
+    border-radius: 2px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    transition: all var(--transition);
+}
+
+#signup form button:hover {
+    color: var(--wood);
+    background: var(--beige);
+    border-color: var(--beige);
+}
+
+#signup > p,
+#login > p {
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+#signup > p { color: var(--muted); }
+
+#signup > p a,
+#login > p a {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+#signup > p a { color: var(--mocha); }
+
+/* 04. LOGIN */
+
+#login {
+    width: min(92%, 500px);
+    margin: 0 auto 46px;
+    padding: 40px;
+    background: linear-gradient(145deg, #160C06, #5C402F);
+    border: 1px solid rgba(200,150,116,.3);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+}
+
+#login::before {
+    content: 'WELCOME BACK';
+    color: var(--beige);
+}
+
+#login > h2 { color: var(--cream); }
+#login form label { color: var(--cream-dark); }
+#login form input { background: #FCF8F3; }
+
+#login form button {
+    color: var(--wood);
+    background: var(--beige);
+    border-color: var(--beige);
+}
+
+#login form button:hover {
+    color: var(--cream);
+    background: transparent;
+    border-color: var(--cream);
+}
+
+#login > p { color: var(--cream-dark); }
+#login > p a { color: var(--beige); }
+
+/* 05. HEADER */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 19px 6%;
+    background: rgba(255,253,249,.97);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 5px 25px rgba(51,33,22,.035);
+    backdrop-filter: blur(15px);
+}
+
+header > h1 {
+    flex-shrink: 0;
+    color: var(--wood);
+    font-size: clamp(23px, 2.5vw, 33px);
+    font-weight: 600;
+    letter-spacing: -1.2px;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 9px 21px;
+}
+
+header nav a {
+    position: relative;
+    padding: 7px 0;
+    color: var(--espresso);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--mocha);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--transition);
+}
+
+header nav a:hover { color: var(--mocha); }
+
+header nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* 06. GENERAL SECTIONS */
+
+#restaurant-content > section {
+    padding: 100px 7%;
+    scroll-margin-top: 95px;
+}
+
+#restaurant-content > section > h2 {
+    margin-bottom: 23px;
+    color: var(--wood);
+    font-size: clamp(34px, 4.5vw, 56px);
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+}
+
+#restaurant-content > section > p {
+    max-width: 660px;
+    font-size: 14px;
+    line-height: 2;
+}
+
+#restaurant-content h3 {
+    color: var(--espresso);
+    font-size: 27px;
+    font-weight: 500;
+}
+
+/* 07. HOMEPAGE HERO */
+
+#home {
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 86px 8% !important;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        radial-gradient(
+            ellipse at 10% 20%,
+            rgba(200,150,116,.17),
+            transparent 36%
+        ),
+        linear-gradient(
+            110deg,
+            #F7F0E8 0%,
+            #F7F0E8 58%,
+            #EADBCD 100%
+        );
+    font-size: 0;
+}
+
+#home::before {
+    content: 'GOOD FOOD. BEAUTIFUL MOMENTS.';
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin-bottom: 25px;
+    color: var(--mocha);
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3.4px;
+    animation: heroTextEnter .7s ease both;
+}
+
+#home h2 {
+    position: relative;
+    z-index: 1;
+    width: 57%;
+    max-width: 680px;
+    margin-bottom: 23px;
+    color: var(--wood);
+    font-size: clamp(43px, 5.5vw, 72px);
+    font-weight: 500;
+    letter-spacing: -2.5px;
+    line-height: 1.08;
+    animation: heroTextEnter .8s .08s ease both;
+}
+
+#home p {
+    position: relative;
+    z-index: 1;
+    width: 46%;
+    max-width: 490px;
+    margin-bottom: 28px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2.1;
+    animation: heroTextEnter .8s .16s ease both;
+}
+
+#home > a {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    min-height: 49px;
+    margin: 0 9px 9px 0;
+    padding: 13px 21px;
+    color: var(--white);
+    background: var(--wood);
+    border: 1px solid var(--wood);
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    transition: all var(--transition);
+}
+
+#home > a:hover {
+    color: var(--wood);
+    background: var(--beige);
+    border-color: var(--beige);
+    transform: translateY(-3px);
+}
+
+#home > a:nth-of-type(2) {
+    color: var(--wood);
+    background: transparent;
+    border-color: rgba(92,64,47,.36);
+}
+
+#home > a:nth-of-type(2):hover {
+    color: var(--white);
+    background: var(--mocha);
+    border-color: var(--mocha);
+}
+
+
+
+#home::after {
+    content: none !important;
+    display: none !important;
+}
+
+#home > img {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 8%;
+    right: 6%;
+    width: 40%;
+    height: 84%;
+    max-width: none;
+    object-fit: cover;
+    background: var(--cream-dark);
+    border: 8px solid var(--white);
+    outline: 1px solid rgba(92,64,47,.18);
+    box-shadow: 18px 22px 0 rgba(200,150,116,.30);
+    animation: heroImageEnter 1s ease both;
+}
+
+#home > img[src=""] {
+    display: none;
+}
+
+@keyframes heroTextEnter {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroImageEnter {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* 08. ABOUT — HTML IMAGE */
+
+#about {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, .9fr);
+    align-items: center;
+    gap: 30px 8%;
+    background: var(--white);
+}
+
+#about h2 {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+}
+
+#about p {
+    grid-column: 1;
+    grid-row: 2;
+    max-width: 500px;
+    margin-top: -12px;
+    font-size: 14px;
+    line-height: 2.2;
+}
+
+#about::after {
+    content: none !important;
+    display: none !important;
+}
+
+#about > img {
+    display: block;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 100%;
+    min-height: 390px;
+    height: 100%;
+    object-fit: cover;
+    background: var(--cream-dark);
+    border: 8px solid var(--cream);
+    outline: 1px solid var(--border);
+    box-shadow: 12px 14px 0 rgba(200,150,116,.3);
+}
+
+#about > img[src=""] {
+    display: none;
+}
+
+/* 09. CATEGORIES */
+
+#categories {
+    text-align: center;
+    background: var(--wood);
+}
+
+#categories > h2 {
+    margin-bottom: 34px !important;
+    color: var(--cream) !important;
+}
+
+#categories > h2::after {
+    content: '';
+    display: block;
+    width: 65px;
+    height: 2px;
+    margin: 22px auto 0;
+    background: var(--beige);
+}
+
+#categories ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    list-style: none;
+}
+
+#categories li a {
+    display: block;
+    min-width: 125px;
+    padding: 13px 20px;
+    color: var(--cream);
+    background: rgba(255,253,249,.035);
+    border: 1px solid rgba(247,240,232,.25);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .6px;
+    transition: all var(--transition);
+}
+
+#categories li a:hover {
+    color: var(--wood);
+    background: var(--beige);
+    border-color: var(--beige);
+    transform: translateY(-3px);
+}
+
+/* 10. MENU — ALL PHOTOS COME FROM HTML */
+
+#menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 23px;
+    padding: 105px 7% !important;
+    background:
+        radial-gradient(
+            ellipse at top left,
+            rgba(200,150,116,.12),
+            transparent 36%
+        ),
+        var(--cream);
+}
+
+#menu > h2,
+#menu > p,
+#menu > h3 {
+    grid-column: 1 / -1;
+}
+
+#menu > h2 {
+    margin-bottom: 0 !important;
+    padding-top: 26px;
+    color: var(--wood) !important;
+    font-size: clamp(42px,5.5vw,68px) !important;
+    letter-spacing: -2px !important;
+}
+
+#menu > h2::before {
+    content: 'A TASTE OF SOMETHING SPECIAL';
+    display: block;
+    margin-bottom: 18px;
+    color: var(--mocha);
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+#menu > h2::after {
+    content: '';
+    display: block;
+    width: 1100px;
+    height: 2px;
+    margin-top: 24px;
+    background: var(--beige);
+}
+
+#menu > p {
+    margin: -4px 0 10px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+#menu > h3 {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: 42px 0 2px;
+    padding-bottom: 15px;
+    color: var(--espresso) !important;
+    border-bottom: 1px solid var(--border);
+    font-size: clamp(27px,3vw,35px) !important;
+}
+
+#menu > h3::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right,var(--beige),transparent);
+}
+
+#menu article {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(125px,.85fr) minmax(0,1.15fr);
+    grid-template-rows: auto auto 1fr auto;
+    align-items: start;
+    gap: 9px 18px;
+    min-width: 0;
+    min-height: 230px;
+    padding: 14px;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid rgba(92,64,47,.13);
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(51,33,22,.035);
+    transition: transform var(--transition),
+                border-color var(--transition),
+                box-shadow var(--transition);
+}
+
+#menu article:hover {
+    transform: translateY(-5px);
+    border-color: rgba(145,102,74,.45);
+    box-shadow: var(--shadow-hover);
+}
+
+#menu article img {
+    grid-column: 1;
+    grid-row: 1 / 5;
+    width: 100%;
+    height: 100%;
+    min-height: 195px;
+    max-height: 260px;
+    object-fit: cover;
+    background: var(--cream-dark);
+    border-radius: 3px;
+    transition: transform .5s ease;
+}
+
+#menu article:hover img { transform: scale(1.03); }
+#menu article img[src=""] { display: none; }
+
+/* Removed CSS photo fallbacks. */
+
+#menu article::before {
+    content: none !important;
+    display: none !important;
+}
+
+#menu article h4 {
+    grid-column: 2;
+    align-self: end;
+    margin: 5px 0 0;
+    color: var(--wood);
+    font-size: clamp(18px,2vw,23px);
+    font-weight: 600;
+    letter-spacing: -.4px;
+    line-height: 1.35;
+}
+
+#menu article p:first-of-type {
+    grid-column: 2;
+    margin: 0;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+#menu article p:nth-of-type(2) {
+    grid-column: 2;
+    align-self: end;
+    margin: 7px 0 0;
+    padding-top: 10px;
+    color: var(--mocha);
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* MENU AND CHEF'S SPECIAL ADD TO CART BUTTONS */
+
+#menu article button,
+#chefs-special article button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2;
+    align-self: end;
+    justify-self: start;
+    width: 100%;
+    max-width: 185px;
+    min-height: 41px;
+    margin: 5px 0 0;
+    padding: 10px 12px;
+    color: var(--white);
+    background: var(--wood);
+    border: 1px solid var(--wood);
+    border-radius: 2px;
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all var(--transition);
+}
+
+#menu article button:hover,
+#chefs-special article button:hover {
+    color: var(--wood);
+    background: var(--beige);
+    border-color: var(--beige);
+    transform: translateY(-2px);
+}
+
+/* 11. CHEF'S SPECIAL — HTML IMAGES */
+
+#chefs-special {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 25px;
+    background: var(--cream-dark);
+}
+
+#chefs-special > h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 5px !important;
+}
+
+#chefs-special > h2::after {
+    content: '';
+    display: block;
+    width: 1100px;
+    height: 2px;
+    margin-top: 22px;
+    background: var(--mocha);
+}
+
+#chefs-special article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    padding: 0 0 27px;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+#chefs-special article:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+#chefs-special article img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    background: var(--cream-dark);
+}
+
+#chefs-special article img[src=""] { display: none; }
+
+#chefs-special article::before {
+    content: none !important;
+    display: none !important;
+}
+
+#chefs-special article h3,
+#chefs-special article p {
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+#chefs-special article h3 {
+    margin-top: 23px;
+    margin-bottom: 8px;
+    color: var(--wood);
+    font-size: 25px;
+}
+
+#chefs-special article p {
+    margin-bottom: 9px;
+    font-size: 13px;
+}
+
+#chefs-special article p:nth-of-type(2) {
+    color: var(--mocha);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#chefs-special article button {
+    width: auto;
+    min-width: 155px;
+    max-width: calc(100% - 50px);
+    min-height: 43px;
+    margin: 7px 25px 0;
+    padding: 11px 18px;
+    color: var(--white);
+    background: var(--wood);
+    border: 1px solid var(--wood);
+    border-radius: 2px;
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    transition: all var(--transition);
+}
+
+#chefs-special article button:hover {
+    color: var(--wood);
+    background: var(--beige);
+    border-color: var(--beige);
+    transform: translateY(-2px);
+}
+
+/* 12. SPECIAL OFFERS — HTML IMAGES */
+
+#offers {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 24px;
+    background: var(--white);
+}
+
+#offers > h2 { grid-column: 1 / -1; }
+
+#offers > h2::after {
+    content: '';
+    display: block;
+    width: 1100px;
+    height: 2px;
+    margin-top: 20px;
+    background: var(--beige);
+}
+
+#offers article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 360px;
+    padding: 30px;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--espresso);
+    border-radius: 4px;
+}
+
+#offers article img {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .65s ease;
+}
+
+#offers article img[src=""] { display: none; }
+
+#offers article::before {
+    content: none !important;
+    display: none !important;
+}
+
+#offers article::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to top,
+        rgba(22,12,6,.95),
+        rgba(22,12,6,.48) 48%,
+        rgba(22,12,6,.03)
+    );
+}
+
+#offers article:hover img {
+    transform: scale(1.06);
+}
+
+#offers article h3 {
+    margin-bottom: 9px;
+    color: var(--white);
+    font-size: clamp(25px,3vw,35px);
+}
+
+#offers article p {
+    color: #EADBCD;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* 13. GALLERY — HTML IMAGES */
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    gap: 14px;
+    background: var(--cream);
+}
+
+#gallery > h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 15px !important;
+}
+
+#gallery > h2::after {
+    content: '';
+    display: block;
+    width: 1100px;
+    height: 2px;
+    margin-top: 20px;
+    background: var(--mocha);
+}
+
+#gallery img {
+    width
